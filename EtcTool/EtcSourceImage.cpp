@@ -31,7 +31,7 @@
 #include <string.h>
 #include <assert.h>
 
-#include "lodepng.h"
+#include <LodePNG/lodepng.h>
 
 namespace Etc
 {

@@ -28,7 +28,7 @@
 #include "EtcImage.h"
 #include "EtcBlock4x4.h"
 
-#include "lodepng.h"
+#include <LodePNG/lodepng.h>
 #include <stdlib.h>
 #include <cmath> //sqrt fn()
 

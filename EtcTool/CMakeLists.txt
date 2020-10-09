@@ -15,14 +15,15 @@
 project(EtcTool)
 include_directories(../EtcLib/Etc)
 include_directories(../EtcLib/EtcCodec)
-include_directories(../third_party/lodepng)
+#include_directories(../third_party/lodepng)
+
+hunter_add_package(LodePNG)
+find_package(LodePNG CONFIG REQUIRED)
 
 file(GLOB SOURCES
 	${PROJECT_SOURCE_DIR}/*.h
-	${PROJECT_SOURCE_DIR}/*.cpp
-	../third_party/lodepng/*.h
-	../third_party/lodepng/*.cpp)
+	${PROJECT_SOURCE_DIR}/*.cpp)
 add_executable(EtcTool ${SOURCES})
 
-target_link_libraries (EtcTool EtcLib)
+target_link_libraries(EtcTool PRIVATE EtcLib LodePNG::lodepng)
 

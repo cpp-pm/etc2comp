@@ -34,7 +34,7 @@
 #include "EtcBlock4x4Encoding_R11.h"
 #include "EtcBlock4x4Encoding_RG11.h"
 
-#include "lodepng.h"
+#include <LodePNG/lodepng.h>
 
 #include <stdlib.h>
 #include <string.h>
